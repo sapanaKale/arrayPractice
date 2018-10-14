@@ -46,6 +46,15 @@ const filterOddNumbers = function (source) {
 }
 
 
+const calculateSum = function (elements) {
+  let result = 0;
+  for (element of elements) {
+    result = result + element;
+  }
+  return result;
+}
+
+exports.calculateSum = calculateSum;
 exports.insertArrayElement = insertArrayElement;
 exports.removeFirstOccurence = removeFirstOccurence;
 exports.filterOddNumbers = filterOddNumbers;

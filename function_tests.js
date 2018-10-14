@@ -31,3 +31,10 @@ assert.deepEqual(filterOddNumbers([1,2]),[1]);
 assert.deepEqual(filterOddNumbers([2,3,4,,"a",5,7]),[3,5,7]);
 assert.deepEqual(filterOddNumbers([2,3,4,-1,"a",-5,-7]),[3,-1,-5,-7]);
 
+//test for function which gives sum of all elements of array
+const calculateSum = library.calculateSum;
+assert.deepEqual(calculateSum([]),0);
+assert.deepEqual(calculateSum([1]),1);
+assert.deepEqual(calculateSum([1,2]),3);
+assert.deepEqual(calculateSum([1,-2,3,4]),6);
+assert.deepEqual(calculateSum([6,-7]),-1);
