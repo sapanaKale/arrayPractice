@@ -38,3 +38,11 @@ assert.deepEqual(calculateSum([1]),1);
 assert.deepEqual(calculateSum([1,2]),3);
 assert.deepEqual(calculateSum([1,-2,3,4]),6);
 assert.deepEqual(calculateSum([6,-7]),-1);
+
+//test for function which give reversed array
+const reverseArray = library.reverseArray;
+assert.deepEqual(reverseArray([]),[]);
+assert.deepEqual(reverseArray([1]),[1]);
+assert.deepEqual(reverseArray([1,2]),[2,1]);
+assert.deepEqual(reverseArray([1,-2,-3]),[-3,-2,1]);
+//assert.deepEqual(reverseArray(['a',,'b',1]),[1,'b',,'a']);

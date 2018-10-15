@@ -54,6 +54,16 @@ const calculateSum = function (elements) {
   return result;
 }
 
+const reverseArray = function (elements) {
+  let reversedArray = [];
+  for (element of elements) {
+    reversedArray.unshift(element);
+  }
+ // reversedArray.pop();
+  return reversedArray;
+}
+
+exports.reverseArray = reverseArray;
 exports.calculateSum = calculateSum;
 exports.insertArrayElement = insertArrayElement;
 exports.removeFirstOccurence = removeFirstOccurence;
