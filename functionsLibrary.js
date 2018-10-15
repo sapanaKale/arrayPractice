@@ -59,10 +59,18 @@ const reverseArray = function (elements) {
   for (element of elements) {
     reversedArray.unshift(element);
   }
- // reversedArray.pop();
   return reversedArray;
 }
 
+const selectEverySecondElement = function (elements) {
+  let result = [];
+  for (let index=1; index<elements.length; index+=2) {
+    result.push(elements[index]);
+  }
+  return result;
+}
+
+exports.selectEverySecondElement = selectEverySecondElement;
 exports.reverseArray = reverseArray;
 exports.calculateSum = calculateSum;
 exports.insertArrayElement = insertArrayElement;

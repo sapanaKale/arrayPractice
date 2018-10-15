@@ -45,4 +45,13 @@ assert.deepEqual(reverseArray([]),[]);
 assert.deepEqual(reverseArray([1]),[1]);
 assert.deepEqual(reverseArray([1,2]),[2,1]);
 assert.deepEqual(reverseArray([1,-2,-3]),[-3,-2,1]);
-//assert.deepEqual(reverseArray(['a',,'b',1]),[1,'b',,'a']);
+assert.deepEqual(reverseArray([1,'a',3,,'b']),['b',undefined,3,'a',1]);
+
+//test for function which gives array of every second element of given array
+const selectEverySecondElement = library.selectEverySecondElement;
+assert.deepEqual(selectEverySecondElement([1]),[]);
+assert.deepEqual(selectEverySecondElement([1,2]),[2]);
+assert.deepEqual(selectEverySecondElement([1,"",3]),[""]);
+assert.deepEqual(selectEverySecondElement([1,2,3,4,5,6,7,8]),[2,4,6,8]);
+assert.deepEqual(selectEverySecondElement(['a','b','c','d']),['b','d']);
+assert.deepEqual(selectEverySecondElement(['a',,3,"",,]),[undefined,""]);
