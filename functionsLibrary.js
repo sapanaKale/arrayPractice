@@ -106,6 +106,16 @@ const calculateAverage = function (source) {
   return average;
 }
 
+const mapLength = function (source) {
+  let result = [];
+  for (let index=0; index<source.length; index++) {
+    result[index] = source[index].length;
+  }
+  return result;
+}
+
+
+exports.mapLength = mapLength;
 exports.calculateAverage = calculateAverage;
 exports.findSmallestNumber = findSmallestNumber;
 exports.findGratestNumber = findGratestNumber;

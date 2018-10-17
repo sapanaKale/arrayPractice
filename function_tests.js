@@ -91,6 +91,13 @@ assert.deepEqual(calculateAverage([1,2,3]),2);
 assert.deepEqual(calculateAverage([1,-1,2,2]),1);
 
 
+//test for function which returns array of length of each element of given array
+
+const mapLength = library.mapLength;
+assert.deepEqual(mapLength(['a']),[1]);
+assert.deepEqual(mapLength(['a','b']),[1,1]);
+assert.deepEqual(mapLength(['abc','def','pq']),[3,3,2]);
+
 console.log("all tests are passed")
 
 
