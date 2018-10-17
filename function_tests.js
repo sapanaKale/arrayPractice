@@ -206,7 +206,10 @@ assert.deepEqual(extractUnionSet([1,2,3],[1,-1,2,5]),[1,2,3,-1,5]);
 const extractCommon = library.extractCommon;
 assert.deepEqual(extractCommon([1],[0]),[]);
 assert.deepEqual(extractCommon([1],[1]),[1]);
-assert.deep
+assert.deepEqual(extractCommon([1,2],[2,3]),[2]);
+assert.deepEqual(extractCommon([1,2,3,4,-1,-2],[-1]),[-1]);
+assert.deepEqual(extractCommon([1,2,3,4],[1,2,3,4]),[1,2,3,4]);
+
 
 console.log("all tests are passed")
 

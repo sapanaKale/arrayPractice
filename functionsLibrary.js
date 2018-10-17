@@ -143,7 +143,7 @@ const countNumbersAboveThreshold = function (source,threshold) {
 }
   
 const findIndex = function (source,number) {
-  let index = 'number not found';
+  let index = -1;
   for (let position=source.length-1; position>=0; position--) {
     if (source[position] == number) {
       index = position;
@@ -222,7 +222,17 @@ const extractUnionSet = function (source1,source2) {
   return result;
 }
 
+const extractCommon = function (source1,source2) {
+  let result = [];
+  for (let element of source1) {
+    if (source2.includes(element)) {
+      result.push(element);
+    }
+  }
+  return result;
+}
 
+exports.extractCommon = extractCommon;
 exports.extractUnionSet = extractUnionSet;
 exports.extractUnique = extractUnique;
 exports.extractDigits = extractDigits;
