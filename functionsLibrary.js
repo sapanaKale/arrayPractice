@@ -202,7 +202,7 @@ const extractDigits = function (number) {
 const extractUnique = function (source) {
   let result = [];
   for (let element of source) {
-    let shouldAdd = (!result.includes(element))
+    let shouldAdd = (!result.includes(element));
       if (shouldAdd) {
         result.push(element);
       }
@@ -210,6 +210,20 @@ const extractUnique = function (source) {
   return result;
 }
 
+const extractUnionSet = function (source1,source2) {
+  let result = [];
+  result  = extractUnique(source1);
+  for (let element of source2) {
+    let shouldAdd = (!result.includes(element));
+    if (shouldAdd) {
+      result.push(element);
+    }
+  }
+  return result;
+}
+
+
+exports.extractUnionSet = extractUnionSet;
 exports.extractUnique = extractUnique;
 exports.extractDigits = extractDigits;
 exports.isInDescendingOrder = isInDescendingOrder;

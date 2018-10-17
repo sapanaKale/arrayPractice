@@ -193,6 +193,21 @@ assert.deepEqual(extractUnique([1,2,1]),[1,2]);
 assert.deepEqual(extractUnique([1,-1,2,-2]),[1,-1,2,-2]);
 assert.deepEqual(extractUnique([1,2,3,2,3,1,4,5,1]),[1,2,3,4,5]);
 
+//test for a function which returns the array containing the unique elements from two given arrays
+
+const extractUnionSet = library.extractUnionSet;
+assert.deepEqual(extractUnionSet([1],[1]),[1]);
+assert.deepEqual(extractUnionSet([1],[1,2]),[1,2]);
+assert.deepEqual(extractUnionSet([1,2,3],[4,5]),[1,2,3,4,5]);
+assert.deepEqual(extractUnionSet([1,2,3],[1,-1,2,5]),[1,2,3,-1,5]);
+
+//test for a function which returns the array containing the common elements from given two arrays
+
+const extractCommon = library.extractCommon;
+assert.deepEqual(extractCommon([1],[0]),[]);
+assert.deepEqual(extractCommon([1],[1]),[1]);
+assert.deep
+
 console.log("all tests are passed")
 
 
