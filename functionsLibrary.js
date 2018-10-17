@@ -70,6 +70,31 @@ const selectEverySecondElement = function (elements) {
   return result;
 }
 
+const generateReverseFibonacci = function (length) {
+  let result = [];
+ if (length >= 1) { 
+   result.push(0);
+ }
+ if (length > 1) { 
+   result.push(1);
+ }
+  for (let index=2; index<length; index++) {
+    result.push(result[index-1] + result[index-2]);
+  }
+  result = reverseArray(result);
+  return result;
+}
+
+const findMax = function (source) {
+  let MaximumNumber = source[0];
+  for (number of source) {
+    MaximumNumber = Math.max(MaximumNumber,number);
+  }
+  return MaximumNumber;
+}
+
+exports.findMax = findMax;
+exports.generateReverseFibonacci = generateReverseFibonacci;
 exports.selectEverySecondElement = selectEverySecondElement;
 exports.reverseArray = reverseArray;
 exports.calculateSum = calculateSum;

@@ -55,3 +55,25 @@ assert.deepEqual(selectEverySecondElement([1,"",3]),[""]);
 assert.deepEqual(selectEverySecondElement([1,2,3,4,5,6,7,8]),[2,4,6,8]);
 assert.deepEqual(selectEverySecondElement(['a','b','c','d']),['b','d']);
 assert.deepEqual(selectEverySecondElement(['a',,3,"",,]),[undefined,""]);
+
+//test for function which gives array of fibonacci series of given length in reverse order.
+const generateReverseFibonacci = library.generateReverseFibonacci;
+assert.deepEqual(generateReverseFibonacci(0),[]);
+assert.deepEqual(generateReverseFibonacci(1),[0]);
+assert.deepEqual(generateReverseFibonacci(2),[1,0]);
+assert.deepEqual(generateReverseFibonacci(3),[1,1,0]);
+assert.deepEqual(generateReverseFibonacci(6),[5,3,2,1,1,0]);
+assert.deepEqual(generateReverseFibonacci(8),[13,8,5,3,2,1,1,0]);
+
+//test for function which gives maxium number of an array
+
+const findMax = library.findMax;
+assert.deepEqual(findMax([1]),1);
+
+
+
+
+
+
+
+
