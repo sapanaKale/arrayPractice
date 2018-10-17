@@ -101,6 +101,12 @@ const findSmallestNumber = function (source) {
   return smallestNumber;
 }
 
+const calculateAverage = function (source) {
+  let average = calculateSum(source)/source.length;
+  return average;
+}
+
+exports.calculateAverage = calculateAverage;
 exports.findSmallestNumber = findSmallestNumber;
 exports.findGratestNumber = findGratestNumber;
 exports.generateReverseFibonacci = generateReverseFibonacci;

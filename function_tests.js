@@ -82,6 +82,17 @@ assert.deepEqual(findSmallestNumber([1,2]),1);
 assert.deepEqual(findSmallestNumber([1,3,4,5,0,3]),0);
 assert.deepEqual(findSmallestNumber([-1,-2,2,1,3]),-2);
 
+//test for function which returns average of numbers of an array
+
+const calculateAverage = library.calculateAverage;
+assert.deepEqual(calculateAverage([1]),1);
+assert.deepEqual(calculateAverage([0,1]),0.5);
+assert.deepEqual(calculateAverage([1,2,3]),2);
+assert.deepEqual(calculateAverage([1,-1,2,2]),1);
+
+
+console.log("all tests are passed")
+
 
 
 
