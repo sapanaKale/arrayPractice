@@ -167,6 +167,16 @@ assert.deepEqual(isInAscendingOrder([0,1,2,3,4]),true);
 assert.deepEqual(isInAscendingOrder([-3,-1,0,1,3]),true);
 assert.deepEqual(isInAscendingOrder([1,-2,2]),false);
 
+//test for function which returns boolean value for is given array in descending order 
+
+const isInDescendingOrder = library.isInDescendingOrder;
+assert.deepEqual(isInDescendingOrder([1]),true);
+assert.deepEqual(isInDescendingOrder([2,1]),true);
+assert.deepEqual(isInDescendingOrder([1,2]),false);
+assert.deepEqual(isInDescendingOrder([1,0,-1]),true);
+assert.deepEqual(isInDescendingOrder([-3,2,1]),false);
+assert.deepEqual(isInDescendingOrder([54,32,13,1]),true);
+
 console.log("all tests are passed")
 
 
