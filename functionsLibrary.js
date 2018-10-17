@@ -126,6 +126,40 @@ const countEvenNumbers = function (source) {
   return count;
 }
 
+const filterNumberAboveThreshold = function (source,threshold) {
+  let result = [];
+  for (number of source) {
+    if (number > threshold) {
+      result.push(number)
+    }
+  }
+  return result;
+}
+
+const countNumbersAboveThreshold = function (source,threshold) {
+  let count = 0;
+  count = filterNumberAboveThreshold(source,threshold).length;
+  return count;
+}
+  
+const findIndex = function (source,number) {
+  let index = 'number not found';
+  for (let position=source.length-1; position>=0; position--) {
+    if (source[position] == number) {
+      index = position;
+    }
+  }
+  return index;
+}
+
+
+
+
+
+
+exports.findIndex = findIndex;
+exports.countNumbersAboveThreshold = countNumbersAboveThreshold;
+exports.filterNumberAboveThreshold = filterNumberAboveThreshold;
 exports.countEvenNumbers = countEvenNumbers;
 exports.countOddNumbers = countOddNumbers;
 exports.mapLength = mapLength;
