@@ -155,6 +155,18 @@ assert.deepEqual(countNumbersBelowThreshold([1],1),0);
 assert.deepEqual(countNumbersBelowThreshold([0,1],1),1);
 assert.deepEqual(countNumbersBelowThreshold([0,1,2,3],2),2);
 
+
+//test for function which returns boolean value for is given array in ascending order
+
+const isInAscendingOrder = library.isInAscendingOrder;
+assert.deepEqual(isInAscendingOrder([1]),true);
+assert.deepEqual(isInAscendingOrder([1,2]),true);
+assert.deepEqual(isInAscendingOrder([1,2,2]),true);
+assert.deepEqual(isInAscendingOrder([2,1]),false);
+assert.deepEqual(isInAscendingOrder([0,1,2,3,4]),true);
+assert.deepEqual(isInAscendingOrder([-3,-1,0,1,3]),true);
+assert.deepEqual(isInAscendingOrder([1,-2,2]),false);
+
 console.log("all tests are passed")
 
 

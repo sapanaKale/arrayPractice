@@ -169,7 +169,23 @@ const countNumbersBelowThreshold = function (source,threshold) {
   return count;
 }
 
+const isInAscendingOrder = function (source) {
+  let result = true;
+  for (let index=0; index<source.length-1; index++) {
+    if (source[index] >source[index+1]) {
+      result = false;
+    }
+  }
+  return result;
+}
 
+
+
+
+
+
+
+exports.isInAscendingOrder = isInAscendingOrder;
 exports.countNumbersBelowThreshold = countNumbersBelowThreshold;
 exports.filterNumberBelowThreshold = filterNumberBelowThreshold;
 exports.findIndex = findIndex;
