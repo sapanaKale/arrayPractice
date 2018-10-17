@@ -153,10 +153,25 @@ const findIndex = function (source,number) {
 }
 
 
+const filterNumberBelowThreshold = function (source,threshold) {
+  let result = [];
+  for (number of source) {
+    if (number < threshold) {
+      result.push(number)
+    }
+  }
+  return result;
+}
+
+const countNumbersBelowThreshold = function (source,threshold) {
+  let count = 0;
+  count = filterNumberBelowThreshold(source,threshold).length;
+  return count;
+}
 
 
-
-
+exports.countNumbersBelowThreshold = countNumbersBelowThreshold;
+exports.filterNumberBelowThreshold = filterNumberBelowThreshold;
 exports.findIndex = findIndex;
 exports.countNumbersAboveThreshold = countNumbersAboveThreshold;
 exports.filterNumberAboveThreshold = filterNumberAboveThreshold;

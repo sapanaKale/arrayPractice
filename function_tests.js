@@ -140,6 +140,21 @@ assert.deepEqual(findIndex([0,1],1),1);
 assert.deepEqual(findIndex([1,2,3,2],2),1);
 assert.deepEqual(findIndex([3,3,3,3,3],3),0);
 
+//test for function which returns array of numbers below threshold
+
+const filterNumberBelowThreshold = library.filterNumberBelowThreshold;
+assert.deepEqual(filterNumberBelowThreshold([0],1),[0]);
+assert.deepEqual(filterNumberBelowThreshold([1],1),[]);
+assert.deepEqual(filterNumberBelowThreshold([1,2,3,4],4),[1,2,3]);
+
+//test for function which returns count of numbers below the threshold
+
+const countNumbersBelowThreshold = library.countNumbersBelowThreshold;
+assert.deepEqual(countNumbersBelowThreshold([0],1),1);
+assert.deepEqual(countNumbersBelowThreshold([1],1),0);
+assert.deepEqual(countNumbersBelowThreshold([0,1],1),1);
+assert.deepEqual(countNumbersBelowThreshold([0,1,2,3],2),2);
+
 console.log("all tests are passed")
 
 
