@@ -85,7 +85,7 @@ const generateReverseFibonacci = function (length) {
   return result;
 }
 
-const findGreatest = function (source) {
+const findGratestNumber = function (source) {
   let greatestNumber = source[0];
   for (number of source) {
     greatestNumber = Math.max(greatestNumber,number);
@@ -93,7 +93,16 @@ const findGreatest = function (source) {
   return greatestNumber;
 }
 
-exports.findGreatest = findGreatest;
+const findSmallestNumber = function (source) {
+  let smallestNumber = source[0];
+  for (let number of source) {
+    smallestNumber = Math.min(smallestNumber,number);
+  }
+  return smallestNumber;
+}
+
+exports.findSmallestNumber = findSmallestNumber;
+exports.findGratestNumber = findGratestNumber;
 exports.generateReverseFibonacci = generateReverseFibonacci;
 exports.selectEverySecondElement = selectEverySecondElement;
 exports.reverseArray = reverseArray;
