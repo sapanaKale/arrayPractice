@@ -105,8 +105,14 @@ assert.deepEqual(countOddNumbers([1]),1);
 assert.deepEqual(countOddNumbers([1,2,3]),2);
 assert.deepEqual(countOddNumbers([1,3,7,5]),4);
 assert.deepEqual(countOddNumbers([2,4,6]),0);
+assert.deepEqual(countOddNumbers([-1,-2,-3,-4]),2);
 
-//test for function which re
+//test for function which returns count of even numbers in an array.
+
+const countEvenNumbers = library.countEvenNumbers;
+assert.deepEqual(countEvenNumbers([1]),0);
+assert.deepEqual(countEvenNumbers([1,2,3]),1);
+assert.deepEqual(countEvenNumbers([2,1,-4,-6,4]),4);
 
 
 console.log("all tests are passed")

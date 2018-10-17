@@ -120,7 +120,13 @@ const countOddNumbers = function (source) {
   return count;
 }
 
+const countEvenNumbers = function (source) {
+  let count = 0;
+  count = filterEvenNumbers(source).length;
+  return count;
+}
 
+exports.countEvenNumbers = countEvenNumbers;
 exports.countOddNumbers = countOddNumbers;
 exports.mapLength = mapLength;
 exports.calculateAverage = calculateAverage;
