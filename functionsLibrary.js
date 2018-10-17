@@ -85,15 +85,15 @@ const generateReverseFibonacci = function (length) {
   return result;
 }
 
-const findMax = function (source) {
-  let MaximumNumber = source[0];
+const findGreatest = function (source) {
+  let greatestNumber = source[0];
   for (number of source) {
-    MaximumNumber = Math.max(MaximumNumber,number);
+    greatestNumber = Math.max(greatestNumber,number);
   }
-  return MaximumNumber;
+  return greatestNumber;
 }
 
-exports.findMax = findMax;
+exports.findGreatest = findGreatest;
 exports.generateReverseFibonacci = generateReverseFibonacci;
 exports.selectEverySecondElement = selectEverySecondElement;
 exports.reverseArray = reverseArray;

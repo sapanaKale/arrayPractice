@@ -67,8 +67,12 @@ assert.deepEqual(generateReverseFibonacci(8),[13,8,5,3,2,1,1,0]);
 
 //test for function which gives maxium number of an array
 
-const findMax = library.findMax;
-assert.deepEqual(findMax([1]),1);
+const findGreatest = library.findGreatest;
+assert.deepEqual(findGreatest([1]),1);
+assert.deepEqual(findGreatest([1,2]),2);
+assert.deepEqual(findGreatest([0,1,2,3,4]),4);
+assert.deepEqual(findGreatest([1,2,-3,-5,]),2);
+assert.deepEqual(findGreatest([-2,-3,-4,-6]),-2);
 
 
 
