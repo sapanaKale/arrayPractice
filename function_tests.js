@@ -177,6 +177,22 @@ assert.deepEqual(isInDescendingOrder([1,0,-1]),true);
 assert.deepEqual(isInDescendingOrder([-3,2,1]),false);
 assert.deepEqual(isInDescendingOrder([54,32,13,1]),true);
 
+//test for function which returns array of digits of given number
+
+const extractDigits = library.extractDigits;
+assert.deepEqual(extractDigits(1),[1]);
+assert.deepEqual(extractDigits(11),[1,1]);
+assert.deepEqual(extractDigits(201761),[2,0,1,7,6,1]);
+
+//test for function which returns the array containing the unique elements of given array
+
+const extractUnique = library.extractUnique;
+assert.deepEqual(extractUnique([]),[]);
+assert.deepEqual(extractUnique([1]),[1]);
+assert.deepEqual(extractUnique([1,2,1]),[1,2]);
+assert.deepEqual(extractUnique([1,-1,2,-2]),[1,-1,2,-2]);
+assert.deepEqual(extractUnique([1,2,3,2,3,1,4,5,1]),[1,2,3,4,5]);
+
 console.log("all tests are passed")
 
 

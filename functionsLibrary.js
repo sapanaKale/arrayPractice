@@ -190,10 +190,28 @@ const isInDescendingOrder = function (source) {
   return result;
 }
 
+const extractDigits = function (number) {
+  let result = [];
+  let givenNumber = number.toString();
+  for (let digit of givenNumber) {
+    result.push(digit);
+  }
+  return result;
+}
 
+const extractUnique = function (source) {
+  let result = [];
+  for (let element of source) {
+    let shouldAdd = (!result.includes(element))
+      if (shouldAdd) {
+        result.push(element);
+      }
+  }
+  return result;
+}
 
-
-
+exports.extractUnique = extractUnique;
+exports.extractDigits = extractDigits;
 exports.isInDescendingOrder = isInDescendingOrder;
 exports.isInAscendingOrder = isInAscendingOrder;
 exports.countNumbersBelowThreshold = countNumbersBelowThreshold;
