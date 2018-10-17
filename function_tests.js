@@ -98,6 +98,17 @@ assert.deepEqual(mapLength(['a']),[1]);
 assert.deepEqual(mapLength(['a','b']),[1,1]);
 assert.deepEqual(mapLength(['abc','def','pq']),[3,3,2]);
 
+//test for function which returns count of odd numbers in an array
+
+const countOddNumbers = library.countOddNumbers;
+assert.deepEqual(countOddNumbers([1]),1);
+assert.deepEqual(countOddNumbers([1,2,3]),2);
+assert.deepEqual(countOddNumbers([1,3,7,5]),4);
+assert.deepEqual(countOddNumbers([2,4,6]),0);
+
+//test for function which re
+
+
 console.log("all tests are passed")
 
 

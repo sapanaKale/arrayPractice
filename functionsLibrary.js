@@ -114,7 +114,14 @@ const mapLength = function (source) {
   return result;
 }
 
+const countOddNumbers = function (source) {
+  let count = 0;
+  count = filterOddNumbers(source).length;
+  return count;
+}
 
+
+exports.countOddNumbers = countOddNumbers;
 exports.mapLength = mapLength;
 exports.calculateAverage = calculateAverage;
 exports.findSmallestNumber = findSmallestNumber;
