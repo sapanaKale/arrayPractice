@@ -234,7 +234,7 @@ const extractCommon = function (source1,source2) {
 
 const extractDifference = function (source1,source2) {
   let result = [];
-  for (element of source1) {
+  for (let element of source1) {
     let shouldAdd = (!source2.includes(element));
     if (shouldAdd) {
       result.push(element)
@@ -243,9 +243,19 @@ const extractDifference = function (source1,source2) {
   return result;
 }
   
+const isSubset = function (set1,set2) {
+  let result = true;
+  for ( let element of set2 ) {
+    let isNotInclude = (!set1.includes(element));
+    if (isNotInclude) {
+      result = false;
+    }
+  }
+  return result;
+}
 
 
-
+exports.isSubset = isSubset;
 exports.extractDifference = extractDifference;
 exports.extractCommon = extractCommon;
 exports.extractUnionSet = extractUnionSet;

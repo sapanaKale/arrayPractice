@@ -219,6 +219,18 @@ assert.deepEqual(extractDifference([1,2],[1,2]),[]);
 assert.deepEqual(extractDifference([1,-2,3],[4,5]),[1,-2,3]);
 assert.deepEqual(extractDifference([1,2],[1,3,4,-8]),[2]);
 
+//test for function which returns the boolean result that second array is subset of first array or not
+
+const isSubset = library.isSubset;
+assert.deepEqual(isSubset([],[]),true);
+assert.deepEqual(isSubset([],[0]),false);
+assert.deepEqual(isSubset([1],[1]),true);
+assert.deepEqual(isSubset([1,2],[2]),true);
+assert.deepEqual(isSubset([1,2,3],[4,5]),false);
+assert.deepEqual(isSubset([1,2],[-1,-2]),false);
+assert.deepEqual(isSubset([1,2],[1,3,4]),false);
+
+
 console.log("all tests are passed")
 
 
