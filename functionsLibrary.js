@@ -232,6 +232,21 @@ const extractCommon = function (source1,source2) {
   return result;
 }
 
+const extractDifference = function (source1,source2) {
+  let result = [];
+  for (element of source1) {
+    let shouldAdd = (!source2.includes(element));
+    if (shouldAdd) {
+      result.push(element)
+    }
+  }
+  return result;
+}
+  
+
+
+
+exports.extractDifference = extractDifference;
 exports.extractCommon = extractCommon;
 exports.extractUnionSet = extractUnionSet;
 exports.extractUnique = extractUnique;

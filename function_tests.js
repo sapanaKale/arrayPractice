@@ -210,6 +210,14 @@ assert.deepEqual(extractCommon([1,2],[2,3]),[2]);
 assert.deepEqual(extractCommon([1,2,3,4,-1,-2],[-1]),[-1]);
 assert.deepEqual(extractCommon([1,2,3,4],[1,2,3,4]),[1,2,3,4]);
 
+//test for function which returns the array containig the different elements of first array as compared to the second
+
+const extractDifference = library.extractDifference;
+assert.deepEqual(extractDifference([1,2],[1]),[2]);
+assert.deepEqual(extractDifference([1,4,5],[4]),[1,5]);
+assert.deepEqual(extractDifference([1,2],[1,2]),[]);
+assert.deepEqual(extractDifference([1,-2,3],[4,5]),[1,-2,3]);
+assert.deepEqual(extractDifference([1,2],[1,3,4,-8]),[2]);
 
 console.log("all tests are passed")
 
