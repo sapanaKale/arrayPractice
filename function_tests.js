@@ -246,6 +246,16 @@ assert.deepEqual(rotateElements([1,2],1),[2,1]);
 assert.deepEqual(rotateElements([1,2,3],1),[2,3,1]);
 assert.deepEqual(rotateElements([1,2,3,4,5],4),[5,1,2,3,4]);
 
+//test for function which returns array containing the arrays of numbers above and below the given number respectively
+
+const subdivideArray = library.subdivideArray;
+assert.deepEqual(subdivideArray([],1),[[],[]]);
+assert.deepEqual(subdivideArray([1],1),[[],[]]);
+assert.deepEqual(subdivideArray([2],1),[[2],[]]);
+assert.deepEqual(subdivideArray([1,2,3],2),[[3],[1]]);
+assert.deepEqual(subdivideArray([1,2,4,5],3),[[4,5],[1,2]]);
+
+
 console.log("all tests are passed")
 
 

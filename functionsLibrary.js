@@ -271,7 +271,14 @@ const rotateElements = function (source,index) {
   return result;
 }
 
+const subdivideArray = function (source,threshold) {
+  let firstElement = filterNumberAboveThreshold(source,threshold);
+  let secondElement = filterNumberBelowThreshold(source,threshold);
+  let result = [firstElement,secondElement];
+  return result;
+}
 
+exports.subdivideArray = subdivideArray;
 exports.rotateElements = rotateElements;
 exports.zipArray = zipArray;
 exports.isSubset = isSubset;
