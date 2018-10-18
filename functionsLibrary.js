@@ -254,7 +254,17 @@ const isSubset = function (set1,set2) {
   return result;
 }
 
+const zipArray = function (source1,source2) {
+  let result = [];
+  let smallerLength = Math.min(source1.length,source2.length);
+  for (let index=0; index<smallerLength; index++) {
+    result.push([source1[index],source2[index]]);
+  }
+  return result;
+}
 
+
+exports.zipArray = zipArray;
 exports.isSubset = isSubset;
 exports.extractDifference = extractDifference;
 exports.extractCommon = extractCommon;

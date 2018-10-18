@@ -230,6 +230,13 @@ assert.deepEqual(isSubset([1,2,3],[4,5]),false);
 assert.deepEqual(isSubset([1,2],[-1,-2]),false);
 assert.deepEqual(isSubset([1,2],[1,3,4]),false);
 
+//test for function which returns array containing the each element as array of elements of given arrays for that index
+
+const zipArray = library.zipArray;
+assert.deepEqual(zipArray([],[]),[]);
+assert.deepEqual(zipArray([1],[1]),[[1,1]]);
+assert.deepEqual(zipArray([1,2,3,4],[-1,-2,-3,-4]),[[1,-1],[2,-2],[3,-3],[4,-4]]);
+assert.deepEqual(zipArray([1,2,3],[1,2]),[[1,1],[2,2]]);
 
 console.log("all tests are passed")
 
