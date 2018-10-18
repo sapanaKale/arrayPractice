@@ -238,6 +238,14 @@ assert.deepEqual(zipArray([1],[1]),[[1,1]]);
 assert.deepEqual(zipArray([1,2,3,4],[-1,-2,-3,-4]),[[1,-1],[2,-2],[3,-3],[4,-4]]);
 assert.deepEqual(zipArray([1,2,3],[1,2]),[[1,1],[2,2]]);
 
+//test for function which shift the elements of upto a given index in the end of array
+
+const rotateElements = library.rotateElements;
+assert.deepEqual(rotateElements([1],0),[1]);
+assert.deepEqual(rotateElements([1,2],1),[2,1]);
+assert.deepEqual(rotateElements([1,2,3],1),[2,3,1]);
+assert.deepEqual(rotateElements([1,2,3,4,5],4),[5,1,2,3,4]);
+
 console.log("all tests are passed")
 
 

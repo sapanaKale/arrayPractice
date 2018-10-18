@@ -263,7 +263,16 @@ const zipArray = function (source1,source2) {
   return result;
 }
 
+const rotateElements = function (source,index) {
+  let result = source;
+  for (let position=0; position<index; position++) {
+    result.push(result.shift());
+  }
+  return result;
+}
 
+
+exports.rotateElements = rotateElements;
 exports.zipArray = zipArray;
 exports.isSubset = isSubset;
 exports.extractDifference = extractDifference;
