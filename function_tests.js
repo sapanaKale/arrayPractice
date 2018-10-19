@@ -2,15 +2,25 @@ const library = require ('./functionsLibrary.js');
 const assert = require ('assert');
 
 //test for function  which inserts value to given index in array
+
+const testInsertArrayElement = function (source,index,value,expectedOutput,testCase) {
+  let actualOutput = insertArrayElement(source,index,value);
+  assert.deepEqual(actualOutput,expectedOutput);
+}
+
 const insertArrayElement = library.insertArrayElement;
-assert.deepEqual(insertArrayElement([1,2,3,4,5,6],4,1),[1,2,3,4,1,5,6]);
-assert.deepEqual(insertArrayElement([1,2,3,4,5,6],0,0),[0,1,2,3,4,5,6]);
-assert.deepEqual(insertArrayElement([1,2,3,4,5,6],6,7),[1,2,3,4,5,6,7]);
+testInsertArrayElement([],0,1,[1],"inserting element in empty array");
+testInsertArrayElement([1],1,2,[1,2],"inserting element at the end");
+testInsertArrayElement([1,2],3,4,[1,2,,4],"inserting element at random index");
+testInsertArrayElement([1,2,3,4,5,6],4,1,[1,2,3,4,1,5,6],"inserting element in between array");
+testInsertArrayElement([1,2,3,4,5,6],0,0,[0,1,2,3,4,5,6],"inserting element in begining of array");
 
 //test for function which removes first occurence of given value from given source array
 const removeFirstOccurence = library.removeFirstOccurence;
-assert.deepEqual(removeFirstOccurence([1,2,3,4,5,6],2),[1,3,4,5,6]);
-assert.deepEqual(removeFirstOccurence([1,2,3,4,5,6],4),[1,2,3,5,6]);
+assert.deepEqual(removeFirstOccurence([1],1),[]);
+assert.deepEqual(removeFirstOccurence([1,2,3],2),[1,3]);
+assert.deepEqual(removeFirstOccurence([1,4,4],4),[1,4]);
+assert.deepEqual(removeFirstOccurence([1,4,3,5,4,5,4],4),[1,3,5,4,5,4]);
 
 //test for function which returns even numbers from given source array
 const filterEvenNumbers = library.filterEvenNumbers;
