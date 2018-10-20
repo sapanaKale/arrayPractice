@@ -22,7 +22,8 @@ const isNumberEven = function (number) {
 }
 
 const filterEvenNumbers = function (source) {
-  return source.filter(isNumberEven);
+  let evenNumbers = source.filter(isNumberEven);
+  return evenNumbers;
 }
 
 const isNumberOdd = function (number) {
@@ -30,17 +31,20 @@ const isNumberOdd = function (number) {
 }
 
 const filterOddNumbers = function (source) { 
-  return source.filter(isNumberOdd);
+  let oddNumbers = source.filter(isNumberOdd);
+  return oddNumbers;
 }
 
+
+const add = function (number1, number2) {
+  return number1 + number2;
+}
 
 const calculateSum = function (elements) {
-  let result = 0;
-  for (element of elements) {
-    result = result + element;
-  }
-  return result;
+  let sum = elements.reduce(add,0);
+  return sum;
 }
+
 
 const reverseArray = function (elements) {
   let reversedArray = [];
