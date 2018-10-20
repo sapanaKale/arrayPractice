@@ -1,9 +1,9 @@
 const insertArrayElement = function (source,index,valueToInsert) {
   let result = source.slice(0,index);
-  for (let position=source.length-1; position>=index; position--) {
-    result[position+1] = source[position];
-  }
   result[index] = valueToInsert;
+  for (let position=index; position<source.length; position++) {
+    result.push(source[position]);
+  }
   return result;
 }
 
@@ -11,7 +11,7 @@ const removeFirstOccurence = function (source,value) {
   let index = source.indexOf(value);
   let result = source.slice(0,index);
   for (let pos=index; pos<source.length; pos++) {
-    result[pos] = source[pos+1];
+    result.push(source[pos+1]);
   }
   result.pop();
   return result;
@@ -22,13 +22,7 @@ const isNumberEven = function (number) {
 }
 
 const filterEvenNumbers = function (source) {
-  let result = [];
-  for (let number of source) {
-    if (isNumberEven(number)) {
-      result.push(number);
-    }
-  }
-  return result;
+  return source.filter(isNumberEven);
 }
 
 const isNumberOdd = function (number) {
@@ -36,13 +30,7 @@ const isNumberOdd = function (number) {
 }
 
 const filterOddNumbers = function (source) { 
-  let result = [];
-  for (let number of source) { 
-    if (isNumberOdd(number)) {
-      result.push(number);
-    }
-  }
-  return result;
+  return source.filter(isNumberOdd);
 }
 
 
