@@ -45,7 +45,6 @@ const calculateSum = function (elements) {
   return sum;
 }
 
-
 const reverseArray = function (elements) {
   let reversedArray = [];
   for (element of elements) {
@@ -246,13 +245,25 @@ const isSubset = function (set1,set2) {
   return result;
 }
 
-const zipArray = function (source1,source2) {
-  let result = [];
-  let smallerLength = Math.min(source1.length,source2.length);
-  for (let index=0; index<smallerLength; index++) {
-    result.push([source1[index],source2[index]]);
+const zip = function (object, element) {
+  object.value[object.index] = [element,object.array[object.index]];
+  object.index++;
+  return object;
+}
+
+const compareArrayLength = function (source1, source2) {
+  let result = { smaller:source1, greater:source2};
+  if (source2.length < source1.length) {
+    result.smaller = source2;
+    result.greater = source1;
   }
   return result;
+}
+
+const zipArray = function (source1,source2) {
+  let smallerArray = compareArrayLength(source1,source2).smaller;
+  let greaterArray = compareArrayLength(source1,source2).greater;
+  return smallerArray.reduce(zip,{index:0,value:[],array:greaterArray}).value;
 }
 
 const rotateElements = function (source,index) {
