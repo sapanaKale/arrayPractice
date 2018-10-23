@@ -46,12 +46,12 @@ const calculateSum = function (elements) {
 }
 
 const reverseArray = function (elements) {
-  let reversedArray = [];
-  for (element of elements) {
-    reversedArray.unshift(element);
-  }
-  return reversedArray;
+  return elements.reduce(function (array,element) {
+    array.unshift(element);
+    return array;
+  },[])
 }
+
 
 const selectEverySecondElement = function (elements) {
   let result = [];
@@ -76,20 +76,26 @@ const generateReverseFibonacci = function (length) {
   return result;
 }
 
-const findGratestNumber = function (source) {
-  let greatestNumber = source[0];
-  for (number of source) {
-    greatestNumber = Math.max(greatestNumber,number);
+const findGreater = function (number1,number2) {
+  if ( number1 > number2 ) {
+    return number1;
   }
-  return greatestNumber;
+  return number2;
+}
+
+const findSmaller = function (number1,number2) {
+  if ( number1 < number2 ) {
+    return number1;
+  }
+  return number2;
+}
+
+const findGratestNumber = function (source) {
+  return source.reduce(findGreater);
 }
 
 const findSmallestNumber = function (source) {
-  let smallestNumber = source[0];
-  for (let number of source) {
-    smallestNumber = Math.min(smallestNumber,number);
-  }
-  return smallestNumber;
+  return source.reduce(findSmaller);
 }
 
 const calculateAverage = function (source) {
@@ -97,12 +103,12 @@ const calculateAverage = function (source) {
   return average;
 }
 
+const calculateLength = function (element) {
+  return element.length;
+}
+
 const mapLength = function (source) {
-  let result = [];
-  for (let index=0; index<source.length; index++) {
-    result[index] = source[index].length;
-  }
-  return result;
+  return source.map(calculateLength);
 }
 
 const countOddNumbers = function (source) {
@@ -235,14 +241,9 @@ const extractDifference = function (source1,source2) {
 }
   
 const isSubset = function (set1,set2) {
-  let result = true;
-  for ( let element of set2 ) {
-    let isNotInclude = (!set1.includes(element));
-    if (isNotInclude) {
-      result = false;
-    }
-  }
-  return result;
+  return set2.every(function (element) {
+    return set1.includes(element);
+  })
 }
 
 const zip = function (object, element) {

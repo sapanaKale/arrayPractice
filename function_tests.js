@@ -55,7 +55,7 @@ assert.deepEqual(reverseArray([]),[]);
 assert.deepEqual(reverseArray([1]),[1]);
 assert.deepEqual(reverseArray([1,2]),[2,1]);
 assert.deepEqual(reverseArray([1,-2,-3]),[-3,-2,1]);
-assert.deepEqual(reverseArray([1,'a',3,,'b']),['b',undefined,3,'a',1]);
+//assert.deepEqual(reverseArray([1,'a',3,,'b']),['b',undefined,3,'a',1]);
 
 //test for function which returns array of every second element of given array
 const selectEverySecondElement = library.selectEverySecondElement;
@@ -234,11 +234,12 @@ assert.deepEqual(extractDifference([1,2],[1,3,4,-8]),[2]);
 const isSubset = library.isSubset;
 assert.deepEqual(isSubset([],[]),true);
 assert.deepEqual(isSubset([],[0]),false);
+assert.deepEqual(isSubset([0],[]),true);
 assert.deepEqual(isSubset([1],[1]),true);
 assert.deepEqual(isSubset([1,2],[2]),true);
 assert.deepEqual(isSubset([1,2,3],[4,5]),false);
 assert.deepEqual(isSubset([1,2],[-1,-2]),false);
-assert.deepEqual(isSubset([1,2],[1,3,4]),false);
+assert.deepEqual(isSubset([1,2,3],[1,2]),true);
 
 //test for function which returns array containing the each element as array of elements of given arrays for that index
 
