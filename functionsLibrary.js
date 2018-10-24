@@ -139,17 +139,10 @@ const countNumbersAboveThreshold = function (source,threshold) {
   count = filterNumberAboveThreshold(source,threshold).length;
   return count;
 }
-  
-const findIndex = function (source,number) {
-  let index = -1;
-  for (let position=source.length-1; position>=0; position--) {
-    if (source[position] == number) {
-      index = position;
-    }
-  }
-  return index;
-}
 
+const findIndex = function (source,number) {
+  return source.indexOf(number);
+}
 
 const filterNumberBelowThreshold = function (source,threshold) {
   let result = [];
