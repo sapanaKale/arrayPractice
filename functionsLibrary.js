@@ -123,14 +123,15 @@ const countEvenNumbers = function (source) {
   return count;
 }
 
-const filterNumberAboveThreshold = function (source,threshold) {
-  let result = [];
-  for (number of source) {
-    if (number > threshold) {
-      result.push(number)
-    }
+const isGreater = function (threshold) {
+  return function (element) {
+    return element > threshold;
   }
-  return result;
+}
+
+const filterNumberAboveThreshold = function (source,threshold) {
+  let numbersGreaterThan = isGreater(threshold);
+  return source.filter(numbersGreaterThan);
 }
 
 const countNumbersAboveThreshold = function (source,threshold) {
