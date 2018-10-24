@@ -144,14 +144,15 @@ const findIndex = function (source,number) {
   return source.indexOf(number);
 }
 
-const filterNumberBelowThreshold = function (source,threshold) {
-  let result = [];
-  for (number of source) {
-    if (number < threshold) {
-      result.push(number)
-    }
+const isSmaller = function (threshold) {
+  return function (number) {
+    return number < threshold;
   }
-  return result;
+}
+
+const filterNumberBelowThreshold = function (source,threshold) {
+  let numbersSmallerThan = isSmaller(threshold);
+  return source.filter(numbersSmallerThan);
 }
 
 const countNumbersBelowThreshold = function (source,threshold) {
